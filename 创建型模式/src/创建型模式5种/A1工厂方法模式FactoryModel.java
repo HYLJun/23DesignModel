@@ -1,4 +1,4 @@
-package 创建型模式;
+package 创建型模式5种;
 
 public class A1工厂方法模式FactoryModel {
     public interface Sender{

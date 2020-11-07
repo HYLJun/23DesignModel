@@ -1,4 +1,4 @@
-package 创建型模式.单例模式Singleton;
+package 创建型模式5种.单例模式Singleton;
 
 /**
  *
