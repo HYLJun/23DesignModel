@@ -1,3 +1,5 @@
+package 创建型模式;
+
 import java.io.*;
 
 /**

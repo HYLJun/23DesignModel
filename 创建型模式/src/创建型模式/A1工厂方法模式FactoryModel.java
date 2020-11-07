@@ -1,3 +1,5 @@
+package 创建型模式;
+
 public class A1工厂方法模式FactoryModel {
     public interface Sender{
         public void sender();
