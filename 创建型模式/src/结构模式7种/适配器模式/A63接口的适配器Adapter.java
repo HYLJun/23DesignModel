@@ -7,42 +7,39 @@ package 结构模式7种.适配器模式;
  * 我们引入接口的适配器模式，借助于一个抽象类，该抽象类实现了该接口，实现了所有的方法，而我们不和原始的接口打交道，
  * 只和该抽象类取得联系，所以我们写一个类，继承该抽象类，重写我们需要的方法即可
  */
+
+interface Sourceable3 {
+    public void method1();
+
+    public void method2();
+}
+
+abstract class InterfaceAdatper implements Sourceable3 {
+    public void method1(){}
+
+    public void method2(){}
+
+}
+
+class SourceSub1 extends InterfaceAdatper {
+    public void method1(){
+        System.out.println("the sourceable interface's first Sub1");
+    }
+
+}
+
+class SourceSub2 extends InterfaceAdatper {
+    public void method2(){
+        System.out.println("the sourceable interface's first Sub2");
+    }
+
+}
+
+
 public class A63接口的适配器Adapter {
-
-    public void method1() {
-        System.out.println("this is original method1");
-    }
-
-    interface Targetable {
-        public void method1();
-
-        public void method2();
-    }
-
-    abstract class InterfaceAdatper implements Targetable {
-        public void method1(){}
-
-        public void method2(){}
-
-    }
-
-    class SourceSub1 extends InterfaceAdatper {
-        public void method1(){
-            System.out.println("the sourceable interface's first Sub1");
-        }
-
-    }
-
-    class SourceSub2 extends InterfaceAdatper {
-        public void method2(){
-            System.out.println("the sourceable interface's first Sub2");
-        }
-
-    }
-
     public static void main(String[] args) {
-        SourceSub1 sourceSub1 = new A63接口的适配器Adapter().new SourceSub1();
-        SourceSub2 sourceSub2 = new A63接口的适配器Adapter().new SourceSub2();
+        Sourceable3 sourceSub1 = new SourceSub1();
+        Sourceable3 sourceSub2 = new SourceSub2();
         sourceSub1.method1();
         sourceSub1.method2();
         sourceSub2.method1();

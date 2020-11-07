@@ -7,28 +7,29 @@ package 结构模式7种.适配器模式;
  */
 public class A61类的适配器Adapter {
 
+    public static void main(String[] args) {
+        Targetable targetable = new Adatper();
+        targetable.method1();
+        targetable.method2();
+    }
+}
+
+class Source {
     public void method1() {
         System.out.println("this is original method1");
     }
+}
 
-    interface Targetable {
-        public void method1();
-        public void method2();
+interface Targetable {
+    public void method1();
+    public void method2();
+}
+
+class Adatper extends Source implements Targetable {
+
+    @Override
+    public void method2() {
+        System.out.println("this is targetable method2");
     }
 
-    class Adatper extends A61类的适配器Adapter implements Targetable {
-
-        @Override
-        public void method2() {
-            System.out.println("this is targetable method2");
-        }
-
-    }
-
-    public static void main(String[] args) {
-        Targetable targetable = new A61类的适配器Adapter().new Adatper();
-        targetable.method1();
-        targetable.method2();
-
-    }
 }
