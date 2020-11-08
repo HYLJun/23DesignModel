@@ -95,7 +95,7 @@ public class A16迭代子模式Iterator {
     public static void main(String[] args) {
         MyCollection myCollection = new MyCollection();
         Iterator iterator = myCollection.iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
     }
